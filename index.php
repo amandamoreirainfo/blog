@@ -45,11 +45,8 @@
             </div>
         </main>
 
-        <?php require "footer.php" ?>
+        <?php require "footer.php"; ?>
     </div>
 
-    <a href="#" class="backToTop">
-        <i class="bi bi-arrow-up-circle-fill"></i>
-    </a>
 </body>
 </html>

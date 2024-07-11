@@ -22,7 +22,7 @@
 
             <main id="main">
 
-                <form class="form">
+                <form class="form" method="POST" action="cadastrar_action.php">
 
                     <div class="input-search">
                         <label for="inputNotice">Título da Notícia:</label>
@@ -40,7 +40,7 @@
 
             </main>  
 
-            <?php require "footer.php" ?> 
+            <?php require "footer.php"; ?> 
     
 </body>
 </html>
