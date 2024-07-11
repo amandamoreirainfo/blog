@@ -11,7 +11,9 @@
 
     #informa se a variavel foi iniciada, ou seja, está vindo tudo correto
     #se estiver existindo eu vou retornar alguma coisa
-    if (isset($title_notice) && isset($description_notice)){
+    #empty vai verifica se a variavel é vazia
+    #!empty se não é vazia, se tiver tem que ser executado
+    if (isset($title_notice) && !empty($title_notice) && isset($description_notice) &&  !empty($description_notice)){
 
         #prepare - vai preparar meu comando sql.
         #inserindo na tabela notices os valores dos campos
@@ -41,7 +43,7 @@
 
             <script>
                 alert('Por favor, preencha todos os campos!');
-                window.location.href = 'index.php';
+                window.location.href = 'cadastrar.php';
             </script>
         
         ";
