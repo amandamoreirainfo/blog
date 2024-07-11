@@ -14,7 +14,8 @@
         $pdo = new PDO("mysql:host=" . $host . ";dbname=" . $dbname,  $user, $pass);
         #dps setto o atributo para fazer um relatorio de erro, guarda na variavel pdo
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Conexão efetuada com sucesso!";
+        #retorna se a conexão foi efetuada com sucesso
+        #echo "Conexão efetuada com sucesso!";
 
     #eu vou armazenar o erro que deu ali na variavel err
     } catch(PDOException $err){

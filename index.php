@@ -2,6 +2,21 @@
 
     require "conn.php";
 
+    #query já executa automaticamente e fica guardado no sql
+    $sql = $pdo->query("SELECT * FROM notices ");
+
+    #se a consulta retorna maior que zero, vamos
+    #criar uma variavel list que vai guardar 
+    #retorna um array indexado pelo nome da coluna
+    #4 conforme retornado em seu conjunto de resultado
+
+    if($sql->rowCount() > 0){
+
+        $lista = $sql ->fetchAll(PDO::FETCH_ASSOC);
+
+    }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -33,16 +48,18 @@
         </header>
 
         <main id="container-post">
+        <?php foreach ($lista as $notice): ?>
             <div class="post">
                 <div class="top-post menu">
-                    <span>26/11/2024</span>
+                    <span><?= $notice['data_create'] ?></span>
                     <i class="bi bi-heart"></i>
                 </div>
                 <div class="content-post">
-                    <h3>Título da Notícia</h3>
-                    <p>Descrição...</p>
+                    <h3><?= $notice['title_notice'] ?></h3>
+                    <p><?= $notice['description_notice'] ?></p>
                 </div>
             </div>
+        <?php endforeach; ?>
         </main>
 
         <?php require "footer.php"; ?>
