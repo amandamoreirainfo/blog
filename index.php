@@ -1,3 +1,9 @@
+<?php
+
+    require "conn.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,7 +21,7 @@
         <header id="header">
             <div class="menu">
                 <h2>Blog</h32>
-                <h2><a href="cadastrar.html">Cadastrar</a></h2>
+                <h2><a href="cadastrar.php">Cadastrar</a></h2>
             </div>
 
             <div class="input-search">

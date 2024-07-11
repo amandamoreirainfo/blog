@@ -14,7 +14,7 @@
 
             <div class="menu">
                 <h2>Blog</h32>
-                <h2><a href="index.html">Início</a></h2>
+                <h2><a href="index.php">Início</a></h2>
             </div>
 
                 <h1>Cadastrar Noticias</h1>
